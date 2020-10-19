@@ -32,5 +32,9 @@ jobs:
     - run: npm run resume export public/index.pdf
     - uses: actions/upload-artifact@v2
       with:
-        name: index.*
+        name: index.pdf
+        path: public/ 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: index.html
         path: public/ 
