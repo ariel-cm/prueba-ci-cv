@@ -30,3 +30,7 @@ jobs:
     - run: mkdir public/
     - run: npm run resume export public/index.html
     - run: npm run resume export public/index.pdf
+    - uses: actions/upload-artifact@v2
+      with:
+        name: index.pdf
+        path: public/ 
