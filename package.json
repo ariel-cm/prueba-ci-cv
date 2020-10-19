@@ -1,0 +1,24 @@
+{
+  "name": "prueba-ci-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resume": "resume" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariel-cm/prueba-ci-cv.git"
+  },
+  "keywords": [],
+  "author": "Ariel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariel-cm/prueba-ci-cv/issues"
+  },
+  "homepage": "https://github.com/ariel-cm/prueba-ci-cv#readme",
+  "dependencies": {
+    "resume-cli": "^2.0.0"
+  }
+}
