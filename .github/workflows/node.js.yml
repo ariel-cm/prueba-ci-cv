@@ -19,9 +19,9 @@ jobs:
         node-version: [20.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
@@ -29,15 +29,15 @@ jobs:
     - run: npm test
     - run: mkdir public/
     - run: npm run resume export -- --theme even public/index.html
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v7
       with:
         name: index.html
-        path: public/ 
+        path: public/
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@v4.9.0
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: public # The folder the action should deploy.
-        CLEAN: true # Automatically remove deleted files from the deploy branch
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
+        folder: public # The folder the action should deploy.
+        clean: true # Automatically remove deleted files from the deploy branch
 
